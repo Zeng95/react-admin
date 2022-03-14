@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   printWidth: 80,
   semi: true,
@@ -5,4 +7,5 @@ module.exports = {
   bracketSpacing: true,
   bracketSameLine: true,
   trailingComma: 'es5',
+  parser: 'babel',
 };
