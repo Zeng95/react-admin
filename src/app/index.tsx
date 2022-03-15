@@ -1,29 +1,20 @@
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Header from '../components/Header';
-import Menu from '../components/Menu';
-import Dashboard from '../pages/dashboard';
-import Register from '../pages/register';
-import Users from '../pages/users';
+import Dashboard from '../pages/Dashboard';
+import Login from '../pages/Login';
+import Register from '../pages/Register';
+import Users from '../pages/Users';
 import './index.css';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <>
-      <Header />
-
-      <div className="container-fluid">
-        <div className="row">
-          <Menu />
-
-          <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="users" element={<Users />} />
-              <Route path="register" element={<Register />} />
-            </Routes>
-          </main>
-        </div>
-      </div>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="users" element={<Users />} />
+        <Route path="auth/login" element={<Login />} />
+        <Route path="auth/register" element={<Register />} />
+      </Routes>
     </>
   );
 };
